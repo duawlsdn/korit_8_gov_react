@@ -1,0 +1,18 @@
+/** @jsxImportSource @emotion/react */
+import { Link } from 'react-router-dom';
+import * as s from './styles';
+import React, { useState } from 'react';
+
+function Home(props) {
+    const [ isLogin, setIsLogin ] = useState(false);
+
+    return (
+        <div css={s.layout}>
+            <main>
+
+            </main>
+        </div>
+    );
+}
+
+export default Home;
