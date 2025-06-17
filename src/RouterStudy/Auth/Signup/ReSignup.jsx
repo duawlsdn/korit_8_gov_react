@@ -5,7 +5,7 @@ import React, { useEffect, useState, useTransition } from 'react';
 import { MdOutlineCheckCircle, MdOutlineErrorOutline } from 'react-icons/md';
 import { IoEye, IoEyeOff } from 'react-icons/io5';
 
-// 컴포넌트화 & 커스텀 Hook 함수
+// 컴포넌트화 & 커스텀 Hook 함수 적용
 function useSignInAndUpInput({ type, name, placeholder, value, valid }) {
     const STATUS = {
         idle: "idle",
