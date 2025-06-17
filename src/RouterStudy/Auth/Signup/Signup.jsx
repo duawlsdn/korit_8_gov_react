@@ -205,3 +205,8 @@ function Signup(props) {
 }
 
 export default Signup;
+
+/**
+ * username, password, checkpassword, fullname(한글), email 
+ * javascript 정규표현식을 각각 만들어주고 error메세지도 만들어줘
+ */
