@@ -23,8 +23,20 @@ import Router2 from './RouterStudy/Router2/Router2'
 import Router3 from './RouterStudy/Router3/Router3'
 import Router4 from './RouterStudy/Router4/Router4'
 import MainRouter from './RouterStudy/Auth/Routers/MainRouter'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import MainRouterReactQuery from './RouterStudy/Auth/Routers/MainRouterReactQuery'
 
 function App() {
+
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        // refetchOnWindowFocus: false,  // tab 이동을 하여 새로고침
+        staleTime: 1000 * 60, // 캐쉬 만료 시간
+        retry: 0,             // 재요청 
+      }
+    }
+  });
 
   return <>
     {/* <HelloReact /> */}
@@ -45,11 +57,14 @@ function App() {
     {/* <Emotion2 /> */}
     {/* <Index /> */}
     <BrowserRouter>
+      <QueryClientProvider client={queryClient}>
+        <MainRouterReactQuery />
+      </QueryClientProvider>
       {/* <Router1 /> */}
       {/* <Router2 /> */}
       {/* <Router3 /> */}
       {/* <Router4 /> */}
-      <MainRouter />
+      {/* <MainRouter /> */}
     </BrowserRouter>
   </>
 }

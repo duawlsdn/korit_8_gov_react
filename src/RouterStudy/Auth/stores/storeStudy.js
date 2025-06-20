@@ -1,10 +1,9 @@
 // preferences -> configusre sinppets -> javascript.json 내에 작성!
-import { create } from "zustand";
-
-export const useRefreshStore = create((set) => ({
-value: true,
-setValue: (callback) => set(state => ({value: callback(state)})),
-}));
+// base 틀
+// export const useStore = create((set) => ({
+// value: true,
+// setValue: (callback) => set(state => ({value: callback(state)})),
+// }));
 
 // 원본
 // export const useRefreshStore = create((set) => ({
@@ -12,6 +11,13 @@ setValue: (callback) => set(state => ({value: callback(state)})),
 //     refresh: () => set(state => ({isRefresh: true})),
 //     reset: () => set(state => ({isRefresh: false})),
 // }));
+import { create } from "zustand";
+
+export const useRefreshStore = create((set) => ({
+value: true,
+setValue: (callback) => set(state => ({value: callback(state)})),
+}));
+
 
 // export const useGlobalSateStore = create((set) => ({}))    // 객체를 리턴하는 함수
 export const useGlobalSateStore = create((set) => ({

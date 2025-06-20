@@ -7,6 +7,7 @@ import ReSignup from '../Signup/ReSignup';
 
 // 로그인이 되지 않아야 들어갈수 있는 페이지
 function UnAuthRouter() {
+    console.log(2);
     return (
         <Routes>
             <Route path='/signin' element={<Signin />}/>
